@@ -154,7 +154,12 @@ router.get("/packing/:id", withAuth, (req, res) => {
     });
 });
 
-//add a router.get("/contacts", withAuth, (req, res) => {
+//add a router.get("/contacts", withAuth, (req, res) => 
+//{ Contact.findAll(
+  //{   where: {
+    //   user_id: req.session.user_id,
+    // },
+    /// etc etc etc 
 
 
 module.exports = router;
