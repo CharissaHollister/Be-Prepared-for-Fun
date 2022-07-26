@@ -16,7 +16,7 @@ Vacay.belongsTo(User, {
 Vacay.hasMany(PackingItem, {
   foreignKey: "vacay_id",
 });
-//packing items linked already. this is indicating that one vacation can have many packing items and that the items belong to a single vacation so will delete if the vacation is deleted.
+
 PackingItem.belongsTo(Vacay, {
   foreignKey: "vacay_id",
   onDelete: "CASCADE",
@@ -31,4 +31,5 @@ AgendaItem.belongsTo(Vacay, {
   onDelete: "CASCADE",
 });
 
+//link contacts to users similar to lines 7 to 14 where we associate users and vacays. don't forget to add to import and export lines
 module.exports = { User, Vacay, AgendaItem, PackingItem };
