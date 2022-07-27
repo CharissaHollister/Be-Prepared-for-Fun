@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { AgendaItem, Vacay } = require("../../models");
+const { AgendaItem } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 router.get("/:id", withAuth, (req, res) => {
@@ -12,9 +12,6 @@ router.get("/:id", withAuth, (req, res) => {
       "title",
       "vacay_id",
       "start",
-      // "display_date",
-      // "start_time",
-      // "end_time",
       "end",
       "location",
       "agenda_notes",

@@ -1,4 +1,6 @@
 {{!-- todo create the display for the packing list page  --}}
+<button class="cal-view nav-v-btn">Calendar</button>
+<button class="edit-vacay nav-v-btn">Edit Vacation</button>
 
 <article class="packing-list">
   <h2>
@@ -9,6 +11,7 @@
 <form class="packing-item-form">
   <div>Add New Item:</div>
     <div>
+    {{!-- <input name="packed" type="checkbox" value="{{packed}}" /> --}}
     <input name="packing-text" type="text" value="{{packing_text}}" />
     </div>
     <button id="save-packing-btn" type="submit">Add item</button>
@@ -19,7 +22,7 @@
 <section>
   <h2>Packing List:</h2>
   {{!-- for each packing item go through and add a partial packing-item.handlebar line to the list  --}}
-  <ul>
+  <ul style="list-style-type:none">
     {{#each vacay.packingItems as | packingItem |}}
     <li>
       {{> packing-item packingItem}}
@@ -35,7 +38,7 @@
 {{!-- script files for calling edit delete and add packing items  --}}
 {{!-- <script src="/javascript/packing.js"></script> --}}
 <script src="/javascript/add-packing-item.js"></script>
-
+{{!-- <script src="/javascript/nav-btns.js"></script> --}}
 {{#if vacay.packingItems.length}}
 <script src="/javascript/edit-packing-item.js"></script>
 <script src="/javascript/delete-packing-item.js"></script>

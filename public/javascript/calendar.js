@@ -1,5 +1,3 @@
-// const FullCalendar = require("fullcalendar");
-
 document.addEventListener("DOMContentLoaded", function () {
   const calendarEl = document.getElementById("calendar");
   const id = window.location.toString().split("/")[
@@ -23,8 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
           "Content-Type": "application/json",
         },
       });
-      // console.log(response);
-
+      console.log(response);
+      // const calEvents = await response.json().map((AgendaItem) => {
+      //   AgendaItem.start = `${display_date}T${startTime}`;
+      //   AgendaItem.end = `${display_date}T${endTime}`;
+      // });
+      ////go through each agenda item and change to start and end
+      // console.log(calEvents);
       const calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: "timeGridWeek",
         events: response,
@@ -33,3 +36,5 @@ document.addEventListener("DOMContentLoaded", function () {
       calendar.render();
     });
 });
+
+

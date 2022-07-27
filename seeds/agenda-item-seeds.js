@@ -3,7 +3,9 @@ const { AgendaItem } = require("../models");
 const agendadata = [
   {
     title: "flight",
-    start: "2022-11-05",
+    start: "2022-11-05T06:32:00",
+    end: "2022-11-05T14:55:00",
+    display_date: "2022-11-05",
     startTime: "06:32:00",
     endTime: "14:55:00",
     location: "the sky",
@@ -12,7 +14,9 @@ const agendadata = [
   },
   {
     title: "dinner",
-    start: "2022-11-08",
+    start: "2022-11-08T16:10:00",
+    end: "2022-11-08T22:00:00",
+    display_date: "2022-11-08",
     startTime: "16:10:00",
     endTime: "22:00:00",
     location: "The Luau Grill",
@@ -21,7 +25,9 @@ const agendadata = [
   },
   {
     title: "beach picnic",
-    start: "2022-11-11",
+    start: "2022-11-11T10:00:00",
+    end: "2022-11-11T14:00:00",
+    display_date: "2022-11-11",
     startTime: "10:00:00",
     endTime: "14:00:00",
     location: "Kaanapali beach",
@@ -30,7 +36,9 @@ const agendadata = [
   },
   {
     title: "leaving 😭",
-    start: "2022-11-13",
+    start: "2022-11-13T16:32",
+    end: "2022-11-13T23:59:00",
+    display_date: "2022-11-13",
     startTime: "16:32:00",
     endTime: "23:59:00",
     location: "the sky",

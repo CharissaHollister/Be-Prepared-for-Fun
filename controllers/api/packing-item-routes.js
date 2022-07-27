@@ -1,6 +1,6 @@
 //declare your necessary constants. express router, packing items model, and withauth utility
 const router = require("express").Router();
-const { PackingItem, Vacay } = require("../../models");
+const { PackingItem } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 //find all packing items with a vacay id indicated. this route will be used to populate the packing list page
@@ -24,6 +24,7 @@ router.post("/", withAuth, (req, res) => {
   //create packing item with attributes then res.json if it's good, error if there's a problem
   PackingItem.create({
     packing_text: req.body.packing_text,
+    packed: req.body.packed,
     vacay_id: req.body.vacay_id,
   })
     .then((dbPackingItemData) => res.json(dbPackingItemData))

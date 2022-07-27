@@ -25,10 +25,10 @@ PackingItem.init(
     },
     //this isn't working so we can just have it a future dev for now
     // figure out boolean or checkbox of some sort
-    // packed: {
-    //   type: DataTypes.BOOLEAN,
-    //   defaultValue: false,
-    // },
+    packed: {
+      type: DataTypes.BOOLEAN,
+      // defaultValue: "false",
+    },
     vacay_id: {
       type: DataTypes.INTEGER,
       references: {

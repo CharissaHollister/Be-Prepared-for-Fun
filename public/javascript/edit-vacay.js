@@ -34,4 +34,4 @@ async function editVacayFormHandler(event) {
 
 document
   .querySelector(".edit-vacay-form")
-  .addEventListener("submit", editVacayFormHandler);
+  .addEventListener("click", editVacayFormHandler);

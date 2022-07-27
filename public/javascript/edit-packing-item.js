@@ -4,6 +4,7 @@ async function editPackingHandler(event) {
   event.preventDefault();
   //   get the id from the button so it tells the system which packing item to remove
   const id = event.target.id;
+  const packed = document.querySelector('input[name="packed"]').value;
   //pull in value from the input line for the packing item text
   const packing_text = document.querySelector(
     'input[name="packing-text"]'
@@ -14,6 +15,7 @@ async function editPackingHandler(event) {
       method: "PUT",
       body: JSON.stringify({
         packing_text,
+        packed,
       }),
       headers: {
         "Content-Type": "application/json",

@@ -7,6 +7,7 @@ async function packingFormHandler(event) {
   const packing_text = document.querySelector(
     'input[name="packing-text"]'
   ).value;
+  // const packed = document.querySelector('input[name="packed"]').value;
   const vacay_id = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
   ];
@@ -17,6 +18,7 @@ async function packingFormHandler(event) {
       body: JSON.stringify({
         packing_text,
         vacay_id,
+        packed: "false",
       }),
       headers: {
         "Content-Type": "application/json",
